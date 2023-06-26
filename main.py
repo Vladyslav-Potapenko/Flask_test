@@ -78,7 +78,6 @@ def email_update():
     email = request.args['email']
     email_id = request.args['email_id']
 
-
     sql = f"""
     UPDATE Emails
     SET EmailValue = '{email}'
@@ -91,7 +90,6 @@ def email_update():
 @app.route("/email/delete")
 def email_delete():
     email_id = request.args['email_id']
-
 
     sql = f"""
         DELETE FROM Emails 
@@ -145,7 +143,6 @@ def phone_update():
     phone = request.args['phone']
     phone_id = request.args['phone_id']
 
-
     sql = f"""
     UPDATE Phones
     SET Contactname = '{name}', PhoneValue = '{phone}'
@@ -159,7 +156,6 @@ def phone_update():
 def phone_delete():
     phone_id = request.args['phone_id']
 
-
     sql = f"""
         DELETE FROM Phones 
         WHERE PhoneId = {phone_id};
@@ -168,7 +164,7 @@ def phone_delete():
 
     return 'Phone_delete'
 
-
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
+
+print(a)
